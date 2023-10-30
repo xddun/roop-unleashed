@@ -67,7 +67,7 @@ def run():
 
         uii.ui_restart_server = False
         try:
-            ui.queue().launch(inbrowser=True, server_name=server_name, server_port=server_port, share=roop.globals.CFG.server_share, ssl_verify=ssl_verify, prevent_thread_lock=True, show_error=True)
+            ui.queue().launch(inbrowser=True, server_name="0.0.0.0", server_port=server_port, share=roop.globals.CFG.server_share, ssl_verify=ssl_verify, prevent_thread_lock=True, show_error=True)
         except Exception as e:
             print(f'Exception {e} when launching Gradio Server!')
             uii.ui_restart_server = True
